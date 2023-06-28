@@ -1,0 +1,84 @@
+.create_vote_container{
+    width: 90%;
+    margin: 0 auto;
+    border: 1px solid black;
+    padding: 50px 50px 20px 50px;
+    border-radius: 15px;
+    box-shadow: 4px 4px 4px 3px rgba(0, 0, 0, 0.4);
+    background-color: rgba(255, 255, 255, 0.858);
+}
+.create_user_form h1{
+    margin-bottom: 30px;
+    text-align: center;
+}
+.form_imputs{
+    margin-right: 20px;
+}
+.form_imputs input{
+    margin-top: 10px;
+}
+
+.person_data_name{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+
+.acount_data_form{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+
+.directions_data_form{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.ci{
+    width: 10rem;
+}
+.password, .email{
+    width: 27.8rem;
+}
+.container_votecreateform{
+    display: grid;
+    grid-template-columns: auto auto;
+    margin-bottom: 40px;
+}
+
+.part_one{
+    padding: 0px 40px;
+}
+.part_two{
+    padding: 0px 40px;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.table_vote_padron{
+    margin-top: 20px;
+    width: 90%;
+}
+
+.modal_container_delete{
+    width: 450px;
+    height: 250px;
+    border-radius: 12px;
+    box-shadow: 4px 4px 4px 3px rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    background-color: white;
+}
+
+.delete_butons{
+    flex: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+.delete_butons button{
+    margin-right: 10px;
+}

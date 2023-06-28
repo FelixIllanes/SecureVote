@@ -1,0 +1,27 @@
+.imputs_politicalform{
+    margin-right: 20px;
+}
+.imputs_politicalform input, label, textarea{
+    margin-top: 10px;
+    width: 20rem;
+    margin-left: 10%;
+}
+.imputs_politicalform textarea{
+    width: 19.8rem;
+}
+.political_form_create{
+    width: 400px;
+    margin: auto;
+    justify-content: center;
+    border: 1px solid black;
+    padding: 30px 20px;
+    border-radius: 15px;
+    box-shadow: 4px 4px 4px 3px rgba(0, 0, 0, 0.4);
+}
+.political_form_create h2{
+    margin-bottom: 20px;
+    text-align: center;
+}
+.login_btn_politicalform{
+    text-align: center;
+}

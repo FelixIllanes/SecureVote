@@ -1,0 +1,74 @@
+:root{
+    --white1: #F7F7F7;
+    --whiteblue: #93DEFF;
+    --gray: #606470;
+    --darkgray: #0a0c0f;
+  }
+
+.sidebar{
+    background: var(--darkgray);
+    color: var(--white1);
+    height: 100%;
+    width: 300px;
+    transition: all 0.4s;
+    position: fixed;
+}
+.parte_arriba{
+    display: flex;
+    align-items: center;
+    padding: 20px 15px;
+}
+.logo{
+    font-size: 25px;
+}
+.bars{
+    display: flex;
+    font-size: 25px;
+    margin-left: 50px;
+}
+.bars:hover{
+    color:var(--whiteblue);
+    transition: all 0.4s;
+}
+.link{
+    display: flex;
+    color: var(--white1);
+    padding: 10px 15px;
+    gap: 15px;
+    transition: all 0.4s;
+}
+.link:hover{
+    background: var(--whiteblue);
+    color:#000;
+    transition: all 0.4s;
+}
+.active{
+    background: var(--whiteblue);
+    color: #000;
+}
+.icon, .texto_link{
+    font-size: 20px;
+}
+.sidebar_cotainer{
+    display: grid;
+    grid-template-columns: auto 95%;
+}
+.logout{
+    margin-top: 23rem;
+    cursor: pointer;
+}
+.logout:hover{
+    color: black;
+}
+.log{
+    border: none;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+}
+.log:hover{
+    color: black;
+}
+.userlogout{
+    margin-top: 32rem;
+}

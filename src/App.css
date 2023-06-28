@@ -1,0 +1,124 @@
+*{
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+  outline: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+:root{
+  --white1: #F7F7F7;
+  --whiteblue: #93DEFF;
+  --gray: #606470;
+  --darkgray: #323643;
+  --hover: #dff5ff;
+}
+main{
+  min-height: 100vh;
+  min-width: 100vw;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-color: var(--white1);
+  width: auto;
+  padding-top: 40px;
+  padding-left: 60px;
+}
+.table_container table{
+  margin: auto;
+}
+table {
+  border: 1px solid black;
+  border-collapse: collapse;
+  margin-left: 6%;
+  margin-right: auto;
+}
+td, th {
+  text-align: center;
+  vertical-align: center;
+  border-bottom: 1px solid black;
+  padding: 0.8em;
+}
+thead{
+  background-color: var(--darkgray);
+  color: white;
+}
+table tr:hover{
+  background-color: var(--hover);
+  cursor: pointer;
+  transition: all 0.4s ease 0s;
+}
+.list_user table{
+  width: 100%;
+}
+.vote_list{
+  margin-bottom: 30px;
+  text-align: center;
+}
+.vote_list table{
+  margin-left: 32%;
+}
+.vote_list h1{
+  margin-bottom: 15px;
+}
+.vote_container{
+  display: grid;
+  grid-template-columns: auto auto;
+  width: 100;
+  padding: 0;
+}
+.container_vote_complete h1{
+  margin-left: 4%;
+}
+.container_vote_complete button{
+  margin-left: 43%;
+  margin-top: 70px;
+}
+.vote_type{
+  margin-bottom: 50px;
+  margin-top: 20px;
+  margin-left: 33%;
+  width: 230px;
+  height: 30px;
+  border-radius: 10px;
+  font-size: 17px;
+  text-align: center;
+}
+.votacion_pendiente_lista{
+  margin-top: 60px;
+  text-align: center;
+}
+
+.estadistic_container{
+  padding: 0 30px;
+}
+
+.estadistics_page{
+  display: grid;
+  grid-template-columns: 30% 70%;
+}
+.container_estadistics_results{
+  display: grid;
+  grid-template-columns: 30% 70%;
+}
+.container_vote_complete{
+  border: 1px solid var(--darkgray);
+  width: 90vw;
+  margin-left: 30px;
+  padding: 20px 80px;
+  border-radius: 17px;
+  box-shadow: 5px 5px 5px 4px rgba(0, 0, 0, 0.4);
+  margin-bottom: 30px;
+}
+.estadistica_container h1{
+  text-align: center;
+  margin-bottom: 40px;
+}
+.political_page{
+  display: grid;
+  grid-template-columns: 40% auto;
+}
+.political_party_page h1{
+  text-align: center;
+  margin-bottom: 40px;
+}
