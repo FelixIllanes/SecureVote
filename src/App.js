@@ -14,6 +14,7 @@ import CreateVote from './Pages/CreateVote';
 import CreateCensus from './Pages/CreateCensus';
 import PoliticalParty from './Pages/PoliticalParty';
 import { AuthProvider } from './store/user';
+import Referendum from './Pages/Referendum';
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
             <Route path='Votacion/:id' element={<Votacion/>}/>
             <Route path='Estadisticas' element={<Estadistics/>}/>
             <Route path='Resultados' element={<Allvotes />}/>
+            <Route path='Referendum' element={<Referendum/>}/>
           </Route>
 
           {/* Rutas para administrador */}

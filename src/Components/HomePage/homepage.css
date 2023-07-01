@@ -6,9 +6,11 @@
     padding: 20px 30px;
     border-radius: 15px;
     box-shadow: 5px 5px 5px 4px rgba(0, 0, 0, 0.4);
+    background-color: rgba(255, 255, 255, 0.372);
 
 }
 .info_cont h1{
     text-align: center;
     margin-bottom: 20px;
+    color: white;
 }

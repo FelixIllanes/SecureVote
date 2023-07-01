@@ -1,9 +1,9 @@
 :root{
     --white1: #F7F7F7;
-    --whiteblue: #93DEFF;
+    --whiteblue: #6fd4ff;
     --gray: #606470;
-    --darkgray: #0a0c0f;
-  }
+    --darkgray: #000000;
+}
 
 .sidebar{
     background: var(--darkgray);

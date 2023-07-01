@@ -30,9 +30,9 @@ function VoteCard({partido, votoChange}) {
             <div className="card_header">
                 <div className="inf_card">
                     <h1>{candidato.candidato.nombre} {candidato.candidato.apellido}</h1>
-                    <p>{unPartido.Slogan}</p>
                 </div>
                 <img src="../../../logo192.png" alt="" />
+                <p>{unPartido.Slogan}</p>
             </div>
             <div className="card_checkbox">
                 <label class="container_checkbox">

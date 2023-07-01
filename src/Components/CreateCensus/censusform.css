@@ -5,6 +5,7 @@
     padding: 20px 40px;
     border-radius: 15px;
     box-shadow: 4px 4px 4px 3px rgba(0, 0, 0, 0.4);
+    background-color: rgba(255, 255, 255, 0.372);
 }
 .create_census_form .form_imputs{
     width: 85%;
@@ -74,6 +75,7 @@
     justify-content: center;
     margin-left: 50px;
 }
-
-
+.modal_footer_census button{
+    margin-right: 15px;
+}
 

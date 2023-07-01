@@ -8,9 +8,9 @@
 }
 :root{
   --white1: #F7F7F7;
-  --whiteblue: #93DEFF;
+  --whiteblue: #6fd4ff;
   --gray: #606470;
-  --darkgray: #323643;
+  --darkgray: #000000;
   --hover: #dff5ff;
 }
 main{
@@ -19,7 +19,7 @@ main{
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  background-color: var(--white1);
+  background-image: url("./Fondo7.png");
   width: auto;
   padding-top: 40px;
   padding-left: 60px;
@@ -38,8 +38,9 @@ td, th {
   vertical-align: center;
   border-bottom: 1px solid black;
   padding: 0.8em;
+  background-color: rgba(255, 255, 255, 0.53);
 }
-thead{
+thead ,th{
   background-color: var(--darkgray);
   color: white;
 }
@@ -60,19 +61,14 @@ table tr:hover{
 }
 .vote_list h1{
   margin-bottom: 15px;
+  color: white;
 }
 .vote_container{
   display: grid;
-  grid-template-columns: auto auto;
+  grid-column-start: 2;
+  grid-template-columns: auto auto auto auto;
   width: 100;
   padding: 0;
-}
-.container_vote_complete h1{
-  margin-left: 4%;
-}
-.container_vote_complete button{
-  margin-left: 43%;
-  margin-top: 70px;
 }
 .vote_type{
   margin-bottom: 50px;
@@ -87,6 +83,9 @@ table tr:hover{
 .votacion_pendiente_lista{
   margin-top: 60px;
   text-align: center;
+}
+.votacion_pendiente_lista h1{
+  color: white;
 }
 
 .estadistic_container{
@@ -103,16 +102,27 @@ table tr:hover{
 }
 .container_vote_complete{
   border: 1px solid var(--darkgray);
-  width: 90vw;
-  margin-left: 30px;
-  padding: 20px 80px;
+  width: 92vw;
+  margin-left: 20px;
+  padding: 20px 50px;
   border-radius: 17px;
   box-shadow: 5px 5px 5px 4px rgba(0, 0, 0, 0.4);
   margin-bottom: 30px;
+  background-color: rgba(255, 255, 255, 0.372);
 }
+.container_vote_complete h1{
+  text-align: center; 
+ }
+ .container_vote_complete button{
+   margin-left: 44%;
+   margin-top: 70px;
+   width: 150px;
+   height: 50px;
+ }
 .estadistica_container h1{
   text-align: center;
   margin-bottom: 40px;
+  color: white;
 }
 .political_page{
   display: grid;
@@ -121,4 +131,25 @@ table tr:hover{
 .political_party_page h1{
   text-align: center;
   margin-bottom: 40px;
+  color: white;
 }
+.container_vote_complete_ref{
+  border: 1px solid var(--darkgray);
+  width: 80vw;
+  margin: auto;
+  padding: 20px 50px;
+  border-radius: 17px;
+  box-shadow: 5px 5px 5px 4px rgba(0, 0, 0, 0.4);
+  margin-bottom: 30px;
+  margin-top: 5%;
+  background-color: rgba(255, 255, 255, 0.372);
+}
+.container_vote_complete_ref h1{
+  text-align: center; 
+ }
+ .container_vote_complete_ref button{
+   margin-left: 44%;
+   margin-top: 70px;
+   width: 150px;
+   height: 50px;
+ }

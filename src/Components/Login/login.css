@@ -1,8 +1,8 @@
 :root{
     --white1: #F7F7F7;
-    --whiteblue: #93DEFF;
+    --whiteblue: #6fd4ff;
     --gray: #606470;
-    --darkgray: #323643;
+    --darkgray: #000000;
 }
 .login_main{
     background-color: var(--gray);
@@ -19,7 +19,7 @@
     margin-top: 10px;
     border-radius: 6px !important;
     font-size: 17;
-    background-color: rgba(255, 255, 255, 0.502);
+    background-color: rgba(255, 255, 255, 0.372);
     box-shadow: 15px 15px 30px #323643,
     -15px -15px 30px #151619;
 }

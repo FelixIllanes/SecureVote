@@ -1,19 +1,20 @@
 .card_header{
-    display: grid;
-    grid-template-columns: auto auto;
     padding: 10px;
+    text-align: center;
 }
 .card_header img{
     margin-top: 25px;
+    text-align: center;
 }
 .inf_card h1{
     margin-bottom: 15px;
+    text-align: center;
 }
 .card_container{
-    width: 500px;
-    padding: 20px 10px 30px 30px;
+    width: 320px;
+    padding: 20px;
     border-radius: 30px;
-    background: #e0e0e0;
+    background-color: rgba(255, 255, 255, 0.372);
     box-shadow: 5px 5px 5px 4px rgba(0, 0, 0, 0.4);
     margin-top: 30px;
 }
@@ -81,4 +82,25 @@ input[type="checkbox"]:checked::before {
    
 input[type="checkbox"]:checked::after {
     opacity: 100%;
+}
+
+.card_checkbox_ref{
+    padding-left: 26%;
+    display: grid;
+    grid-template-columns: 120px 120px;
+}
+.card_checkbox_ref label{
+    font-size: 25px;
+    font-weight: bolder;
+}
+.card_container_ref{
+    width: 620px;
+    padding: 20px;
+    border-radius: 30px;
+    background: #e0e0e0;
+    box-shadow: 5px 5px 5px 4px rgba(0, 0, 0, 0.4);
+    margin-top: 50px;
+    margin-left: 40%;
+    background-color: rgba(255, 255, 255, 0.372);
+
 }
