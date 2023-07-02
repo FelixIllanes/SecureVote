@@ -19,3 +19,8 @@ export const getCadidatoxPartido = (id) =>
     fetch(`${api}/getCandidato/${id}/`)
     .then((res) => res.json())
     .then((data) => data);
+
+export const crearUsuario = (body) =>
+    fetch(`${api}/register/` , {method: 'POST', headers, body: JSON.stringify(body)})
+    .then((res) => res.json())
+    .then((data) => data)

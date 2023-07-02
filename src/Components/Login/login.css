@@ -41,3 +41,11 @@
 .form_login label{
     margin: 0;
 }
+.redirect{
+    font-weight: bolder;
+    cursor: pointer;
+}
+.redirect:hover{
+    color: blueviolet;
+    transition: 0.7s;
+}

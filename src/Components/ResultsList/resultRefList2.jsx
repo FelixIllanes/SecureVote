@@ -1,27 +1,19 @@
 import { useNavigate } from "react-router-dom"
 
-function ResultRefList2() {
+function ResultRefList2({refFinalizada}) {
     
-    /* const{id, nombre, tipo_votacion} = finalizada */
+    const{id, nombre} = refFinalizada
 
     const navigate = useNavigate();
     const redirectTo = () => {
-        navigate(`/Admin/RefEstadistics2`)
+        navigate(`/Admin/RefEstadistics2/${id}`)
     }
-
-    /* let typeV = "Mayoría absoluta"
-    if(tipo_votacion === "N"){
-        typeV = "Normal"
-    }
-    if(tipo_votacion === "P"){
-        typeV = "Proporcional"
-    } */
 
     return(
         <tbody>
             <tr>
-                <td>{/* {nombre} */} Nombre de la votacion</td>
-                <td>{/* {typeV} */} Tipo de votacion</td>
+                <td>{nombre}</td>
+                <td>Referendum</td>
                 <td>
                     <button className="button_one" onClick={redirectTo}>Ver mas</button>
                 </td>

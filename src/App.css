@@ -194,3 +194,11 @@ table tr:hover{
   font-size: 19px;
   margin: 0;
 }
+.user_vote_list_container{
+  display: grid;
+  grid-template-columns: auto auto;
+}
+.create_user_data{
+  display: grid;
+  grid-template-columns: 14% auto auto;
+}

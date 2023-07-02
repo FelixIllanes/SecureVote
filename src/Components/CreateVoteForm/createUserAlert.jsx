@@ -1,4 +1,11 @@
-function CreateVoteAlert({closeAlert, mensaje}){
+import { useNavigate } from "react-router-dom"
+
+function CreateUserAlert({closeAlert}){
+
+    const navigate = useNavigate()
+    const redirectTo = () => {
+        navigate('/')
+    }
 
     return(
         <div className="modal_background_census">
@@ -7,11 +14,11 @@ function CreateVoteAlert({closeAlert, mensaje}){
                     <button onClick={() => closeAlert(false)}>X</button>
                 </div>
                 <div className="modal_body">
-                    <h2>Se creo {mensaje} con exito</h2>
+                    <h2>Usuario creado de manera exitosa</h2>
                 </div>
                 <div className="delete_butons">
                     <button className='button_one' 
-                    onClick={() => window.location.reload()} 
+                    onClick={redirectTo} 
                     type="button">Aceptar</button>
                 </div>
             </div>
@@ -19,4 +26,4 @@ function CreateVoteAlert({closeAlert, mensaje}){
     )
 }
 
-export default CreateVoteAlert
+export default CreateUserAlert

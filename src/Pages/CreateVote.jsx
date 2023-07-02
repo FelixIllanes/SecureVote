@@ -74,7 +74,7 @@ export default function CreateVote() {
                 padron_electoral: padronSelect,
                 ...partidosData
             })
-            crearVotacion(bodyEnviar)
+            /* crearVotacion(bodyEnviar) */
             setOpenAlert(true)
         }else{
             console.log("Debe seleccionar 4 partidos")
@@ -85,7 +85,7 @@ export default function CreateVote() {
     return(
         <>
         {openModal && <VoteModal setOpenModal={setOpenModal} padrones={padrones} setPadronSelect={setPadronSelect}/>}
-        {openAlert && <CreateVoteAlert closeAlert={setOpenAlert}/>}
+        {openAlert && <CreateVoteAlert closeAlert={setOpenAlert} mensaje={"la votación"}/>}
         <main>
         <div className='create_vote_container'>
             <form className="create_user_form">

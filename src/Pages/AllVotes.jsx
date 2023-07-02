@@ -4,15 +4,20 @@ import { votacionesActivas, votacionesTerminadas } from "../services/vote"
 import ResultsList2 from "../Components/ResultsList/resultList2"
 import ResultRefList from "../Components/ResultsList/resultRefList"
 import ResultRefList2 from "../Components/ResultsList/resultRefList2"
+import { getReferendumsActivos, getReferendumsFin } from "../services/referendum"
 
 export default function Allvotes(){
 
     const[activas, setActivas] = useState([])
     const[finalizadas, setFinalizadas] = useState([])
+    const[refActivas, setRefActivas] = useState([])
+    const[refFinalizadas, setRefFinalizadas] = useState([])
 
     useEffect(() => {
         votacionesActivas().then(setActivas)
-        votacionesTerminadas().then(setFinalizadas)        
+        votacionesTerminadas().then(setFinalizadas)
+        getReferendumsActivos().then(setRefActivas)
+        getReferendumsFin().then(setRefFinalizadas)        
     },[])
 
     return(
@@ -57,7 +62,9 @@ export default function Allvotes(){
                             <th>Tipo de votacion</th>
                             <th></th>
                         </thead>
-                        <ResultRefList/>
+                        {refActivas?.map((refActiva, idx) => (
+                            <ResultRefList key={idx} refActiva={refActiva}/>
+                        ))}
                     </table>
                 </div>
                 <div className="vote_list">
@@ -68,7 +75,9 @@ export default function Allvotes(){
                             <th>Tipo de votacion</th>
                             <th></th>
                         </thead>
-                        <ResultRefList2/>
+                        {refFinalizadas?.map((refFinalizada, idx) => (
+                            <ResultRefList2 key={idx} refFinalizada={refFinalizada}/>
+                        ))}
                     </table>
                 </div>
             </div>           

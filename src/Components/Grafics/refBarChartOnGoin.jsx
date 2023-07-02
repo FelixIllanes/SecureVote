@@ -1,13 +1,14 @@
 import { Bar } from 'react-chartjs-2'
-function RefBarchartOnGoin() {
+function RefBarchartOnGoin({data}) {
+
     return(
         <Bar
             data= {{
-                labels: ['Red','Blue', 'Yellow', 'Green'],
+                labels: ['Si','No', 'Nulo', 'Blanco'],
                 datasets: [
                     {
                     label: '# of votes',
-                    data: [12,19,3,5],
+                    data: [data["votos_si"],data["votos_no"],data["votos_nulos"],data["votos_blancos"]],
                     backgroundColor:[
                         '#DC143C',
                         '#20B2AA',

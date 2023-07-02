@@ -1,13 +1,15 @@
 import { Bar } from 'react-chartjs-2'
-function RefBarchart() {
+function RefBarchart({data}) {
+
+    console.log(data["referendums"])
     return(
         <Bar
             data= {{
-                labels: ['Red','Blue', 'Yellow', 'Green'],
+                labels: ['Si','No', 'Nulo', 'Blanco'],
                 datasets: [
                     {
                     label: '# of votes',
-                    data: [12,19,3,5],
+                    data: [data["referendums"]["cant_vsi"],data["referendums"]["cant_vno"],data["referendums"]["cant_vnullo"],data["referendums"]["cant_vblanco"]],
                     backgroundColor:[
                         '#DC143C',
                         '#20B2AA',

@@ -1,13 +1,14 @@
 .info{
     margin: auto;
-    height: 100px;
+    height: 130px;
     width: 900px;
     border: 1px solid black;
-    padding: 20px 30px;
+    padding: 20px 30px 20px 20px;
     border-radius: 15px;
     box-shadow: 5px 5px 5px 4px rgba(0, 0, 0, 0.4);
     background-color: rgba(255, 255, 255, 0.372);
-
+    font-size: 17px;
+    text-align: center;
 }
 .info_cont h1{
     text-align: center;

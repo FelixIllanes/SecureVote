@@ -5,23 +5,20 @@ function UserList({voto}) {
 
 
     let typeV = "Blanco"
-    if(tipo_voto === "N"){
+    if(tipo_voto === "U"){
         typeV = "Nulo"
     }
-    if(tipo_voto === "P"){
-        typeV = "Positivo"
+    if(tipo_voto === "S"){
+        typeV = "Si"
+    }
+    if(tipo_voto === "N"){
+        typeV = "No"
     }
     
-    let res = ci_candidato
-
-    if(ci_candidato == null){
-        res = typeV
-    } 
-
     return(
         <tbody>
             <tr>
-                <td>{hashvoto} {res}</td>
+                <td>{hashvoto} {typeV}</td>
             </tr>
         </tbody>
     )

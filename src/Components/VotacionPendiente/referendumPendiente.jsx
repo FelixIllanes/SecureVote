@@ -1,32 +1,24 @@
 import { useNavigate } from 'react-router-dom';
 import './votacion_pendiente.css'
-function VotacionPendiente({votacion}) {
+function ReferenfumPendiente({referendum}) {
     
     const navigate = useNavigate();
 
 
-    const{ id,nombre,tipo_votacion} = votacion
+    const{ id,nombre} = referendum 
     
     const redirectTo = () => {
-        navigate(`/User/Votacion/${id}`)
-    }
-
-    let typeV = "Mayoría absoluta"
-    if(tipo_votacion === "N"){
-        typeV = "Normal"
-    }
-    if(tipo_votacion === "P"){
-        typeV = "Proporcional"
+        navigate(`/User/Referendum/${id}`)
     }
 
     return(
         <div className="votacion_pendiente_container_user">
             <div className="votacion_info_home_user">
-                <p>{typeV}</p>
+                <p>Referendum</p>
                 <p>{nombre}</p>
                 <button className="button_one" onClick={redirectTo}>Votar ahora</button>
              </div>
         </div>
     )
 }
-export default VotacionPendiente
+export default ReferenfumPendiente

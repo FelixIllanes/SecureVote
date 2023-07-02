@@ -24,6 +24,9 @@ function Login() {
             console.log(err)
         }
     };
+    const redirectTo = () =>{
+        navigate('/CreateUser')
+    }
 
     return(
         <main className="login_main">
@@ -46,6 +49,7 @@ function Login() {
                     </div>
                     <div className="login_btn">
                         <button type="submit" className="button_one">Ingresar</button>
+                        <p>Registrate <a className="redirect" onClick={redirectTo}>aqui</a></p>
                     </div>
                 </form>
             </div>

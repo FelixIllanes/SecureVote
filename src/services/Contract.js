@@ -131,12 +131,10 @@ export const votar_normal = async (tipo_voto, id_votacion, ci_candidato) => {
     const signer = provider.getSigner();
     
     const contract = new ethers.Contract(contractAddress, abi, signer);
-    console.log(contract)
 
     const transaction = await contract.vote(tipo_voto, id_votacion, ci_candidato);
     await transaction.wait();
     hash = transaction["hash"]
-    console.log(hash)
 
   } catch (error) {
     console.error("Error en la transferencia:", error);

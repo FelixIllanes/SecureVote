@@ -18,12 +18,7 @@ const SideBarUser = ({children}) =>{
             path:"Resultados",
             name:"Resultados",
             icon:<FaRegChartBar/>
-        },
-        {
-            path:"Referendum",
-            name:"Referendum",
-            icon:<FaVoteYea/>
-        },
+        }
     ]
 
     const{ logout, user} = useAuth();

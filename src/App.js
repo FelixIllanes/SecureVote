@@ -19,6 +19,7 @@ import CreateReferendum from './Pages/CreateReferendum';
 import Estadistics2 from './Pages/Estadistics2';
 import RefEstadistics from './Pages/RefEstadistics';
 import RefEstadistics2 from './Pages/RefEstadistics2';
+import CreateUser from './Pages/CreateUser';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
     <div className='App'>
       <Routes>
         <Route path='/' element={<Login/>}/>
+        <Route path='/CreateUser' element={<CreateUser/>}/>
 
           {/* Rutas para usuario */}
           <Route path='/User' element={<UserHome/>}>
@@ -33,7 +35,7 @@ function App() {
             <Route path='Votacion/:id' element={<Votacion/>}/>
             <Route path='Estadisticas' element={<Estadistics/>}/>
             <Route path='Resultados' element={<Allvotes />}/>
-            <Route path='Referendum' element={<Referendum/>}/>
+            <Route path='Referendum/:id' element={<Referendum/>}/>
           </Route>
 
           {/* Rutas para administrador */}
@@ -47,8 +49,8 @@ function App() {
             <Route path='Estadisticas/:id' element={<Estadistics/>}/>
             <Route path='Estadisticas2/:id' element={<Estadistics2/>}/>
             <Route path='CreateReferendum' element={<CreateReferendum/>}/>
-            <Route path='RefEstadistics' element={<RefEstadistics/>}/>
-            <Route path='RefEstadistics2' element={<RefEstadistics2/>}/>
+            <Route path='RefEstadistics/:id' element={<RefEstadistics/>}/>
+            <Route path='RefEstadistics2/:id' element={<RefEstadistics2/>}/>
           </Route>
 
           <Route path="*" element={<h1>Not Found</h1>}/>

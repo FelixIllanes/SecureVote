@@ -14,3 +14,20 @@ export const resultadoActual = (id) =>
     fetch(`${api}/getResultadoActual/${id}`)
     .then((res) => res.json())
     .then((data) => data)
+
+//Referendum
+
+export const resultadoReferendumActual = (id) =>
+    fetch(`${api}/getResultadoActualReferendum/${id}/`)
+    .then((res) => res.json())
+    .then((data) => data)
+
+export const resultadoxReferendum = (id) =>
+    fetch(`${api}/calcResultadoReferendum/${id}`)
+    .then((res) => res.json())
+    .then((data) => data)
+
+export const listVotosRef = (id) =>
+    fetch(`${api}/getListVotosHashReferendum/${id}`)
+    .then((res) => res.json())
+    .then((data) => data.votosRef)

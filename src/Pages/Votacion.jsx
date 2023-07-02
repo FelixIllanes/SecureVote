@@ -40,8 +40,6 @@ export default function Votacion() {
         }
     }
 
-    console.log(seleccion)
-
     const make_contract = async () =>{
 
         let tipo_voto = ''
@@ -89,7 +87,6 @@ export default function Votacion() {
         espera()
     }, [])
 
-    console.log(Object.keys(seleccion).length)
 
     
     if(loaded){
