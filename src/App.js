@@ -39,6 +39,8 @@ function App() {
             <Route path='CreateVote' element={<CreateVote/>}/>
             <Route path='CreateCensus' element={<CreateCensus/>}/>
             <Route path='PoliticalParty' element={<PoliticalParty/>}/>
+            <Route path='Resultados' element={<Allvotes />}/>
+            <Route path='Estadisticas/:id' element={<Estadistics/>}/>
           </Route>
 
           <Route path="*" element={<h1>Not Found</h1>}/>

@@ -1,14 +1,23 @@
 import { Bar } from 'react-chartjs-2'
 import {Chart as ChartJS} from 'chart.js/auto'
-function Barchart() {
+import { getPartidoName } from '../../services/partido'
+import { useEffect, useState } from 'react'
+function Barchart({data}) {
+
+
     return(
         <Bar
             data= {{
-                labels: ['Red','Blue', 'Yellow', 'Green', 'Purple','Orange'],
+                labels: [ data["partido1"],data["partido2"], data["partido3"],data["partido4"], 'Nulo','Blanco'],
                 datasets: [
-                    {
-                    label: '# of votes',
-                    data: [12,19,3,5,2,3],
+                    { 
+                    label: 'Votaciones',
+                    data: [data["resultado"][0]["cant_votos"],
+                    data["resultado"][1]["cant_votos"],
+                    data["resultado"][2]["cant_votos"],
+                    data["resultado"][3]["cant_votos"],
+                    data["resultado"][0]["cant_vnullo"],
+                    data["resultado"][0]["cant_vblanco"]],
                     backgroundColor:[
                         'rgba(255, 99, 132, 0.2)',
                         'rgba(255, 159, 64, 0.2)',
@@ -32,7 +41,7 @@ function Barchart() {
                 ],
             }}
             height={400}
-            width={500}
+            width={400}
              options={{
                 maintainAspectRatio: false,
             }} 

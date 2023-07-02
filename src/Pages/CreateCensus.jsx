@@ -3,9 +3,11 @@ import CreateCensusForm from "../Components/CreateCensus"
 import Modal_Census from "../Components/CreateCensus/modal_census"
 import { useUser } from "../hooks/useUser"
 import { asignarUsuarios, createPadron } from "../services/padron"
+import AlertCensus from "../Components/CreateCensus/alert_census"
 export default function CreateCensus() {
 
     const[openModal, setOpenModal] = useState(false)
+    const[openAlert, setOpenAlert] = useState(false)
 
     const{users, updateUser, removeUser, focusUser, user} = useUser()
 
@@ -57,7 +59,8 @@ export default function CreateCensus() {
                                 
                                 setAssign({})
                                 setOpenModal(false)
-                                window.location.reload()
+                                setOpenAlert(true)
+                                /* window.location.reload() */
                             })
                         }
                     }
@@ -71,6 +74,7 @@ export default function CreateCensus() {
     return(
         <>
         {openModal && <Modal_Census closeModal={setOpenModal} users ={users} userCheck={userCheck} handleSubmit={handleSubmit}/>}
+        {openAlert && <AlertCensus closeAlert={setOpenAlert}/>}
         <main>
             <div className='create_census_container' id="create_census_container">
                 <form className="create_census_form">

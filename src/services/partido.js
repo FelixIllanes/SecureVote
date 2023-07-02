@@ -17,3 +17,8 @@ export const createParty = (body) =>
 
 export const deleteParty = (id) =>
     fetch(`${api}/api/partido/${id}/` , {method: 'DELETE', headers});
+
+export const getPartidoName = (ci) => 
+    fetch(`${api}/getPartidoxUsr/${ci}`)
+    .then((res) => res.json())
+    .then((data) => data.partido)

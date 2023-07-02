@@ -11,7 +11,6 @@ export default function Homepage() {
         votacionesUsuario(userId).then(setVotaciones)
     }, [])
 
-    console.log(votaciones)
 
     return(
         <main>

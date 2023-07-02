@@ -1,12 +1,12 @@
 import { useNavigate } from "react-router-dom"
 
-function ResultsList({activa}) {
+function ResultsList2({finalizada}) {
     
-    const{id, nombre, tipo_votacion} = activa
+    const{id, nombre, tipo_votacion} = finalizada
 
     const navigate = useNavigate();
     const redirectTo = () => {
-        navigate('/User/Estadisticas')
+        navigate(`/Admin/Estadisticas/${id}`)
     }
 
     let typeV = "Mayoría absoluta"
@@ -29,4 +29,4 @@ function ResultsList({activa}) {
         </tbody>
     )
 }
-export default ResultsList
+export default ResultsList2

@@ -32,6 +32,11 @@ const SideBar = ({children}) =>{
             path: "CreateCensus",
             name: "Crear Padron",
             icon: <FaIdCard/>
+        },
+        {
+            path: "Resultados",
+            name: "Resultados",
+            icon: <FaRegChartBar/>
         }
     ]
     const{ logout, user} = useAuth();

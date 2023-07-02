@@ -4,6 +4,7 @@ import VoteModal from "../Components/CreateVoteForm/vote_modal"
 import { getAllPadrones } from "../services/padron"
 import { getAllpartidos } from "../services/partido"
 import PartidoList from "../Components/CreateVoteForm/partidoList"
+import { crearVotacion } from "../services/vote"
 export default function CreateVote() {
     
     const[body, setBody] = useState({})
@@ -18,6 +19,8 @@ export default function CreateVote() {
         getAllPadrones().then(setPadrones)
         getAllpartidos().then(setPartidos)
     },[])
+
+    const[openEscanio, setOpenEscanio] = useState('')
 
     const[partidosSelect, setPartidosSelect] = useState({})
     const[lleno, setLleno] = useState(false)
@@ -40,14 +43,17 @@ export default function CreateVote() {
     const[padronSelect, setPadronSelect] = useState({})
 
     const handleChange = (evt) =>{
+        if(evt.target.name === "tipo_votacion" && evt.target.value === "P"){
+            setOpenEscanio('P')
+        }
+        if(evt.target.name === "tipo_votacion" && evt.target.value !== "P"){
+            setOpenEscanio('')
+        }
         setBody({
             ...body,
             [evt.target.name]: evt.target.value,
         })
     }
-
-    const partidosBody = ["partido1","partido2","partido3","partido4"]
-
 
     const handleSubmit = (evt) => {
         if(Object.keys(partidosSelect).length === 4){
@@ -57,21 +63,21 @@ export default function CreateVote() {
 
                 if (partidosSelect.hasOwnProperty(clave)){
                     let partidovar = "partido" 
-                    partidosData[partidovar + i]= partidosSelect[clave]
+                    partidosData[partidovar + i]= Number(partidosSelect[clave])
                     i+=1
                 }
             }
-            setBody({
+            const bodyEnviar = ({
                 ...body,
                 padron_electoral: padronSelect,
                 ...partidosData
             })
+            crearVotacion(bodyEnviar)
         }else{
-            console.log("hola")
+            console.log("Debe seleccionar 4 partidos")
         }
     }
 
-    console.log(body)
 
     return(
         <>
@@ -88,7 +94,7 @@ export default function CreateVote() {
                             type="text"
                             onChange={handleChange}
                             name="nombre"
-                            autocomplete="off"/>
+                            autoComplete="off"/>
                         </div>
                         <div className="form_imputs">
                             <label> Fecha de inicio: </label>
@@ -96,7 +102,7 @@ export default function CreateVote() {
                             type="date"
                             onChange={handleChange} 
                             name="inicio_votacion"
-                            autocomplete="off"/>
+                            autoComplete="off"/>
                         </div>
                         <div className="form_imputs">
                             <label> Fecha de finalización:</label> 
@@ -104,7 +110,7 @@ export default function CreateVote() {
                             type="date"
                             onChange={handleChange}  
                             name="fin_votacion"
-                            autocomplete="off"/>
+                            autoComplete="off"/>
                         </div>
                         <div className="form_imputs">
                         <select className="vote_type"  onChange={handleChange}  name="tipo_votacion" id="type">
@@ -113,6 +119,14 @@ export default function CreateVote() {
                             <option value="N">Mayoria Simple</option>
                             <option value="P">Proporcional</option>
                         </select>
+                        </div>
+                        <div className="form_imputs" style={{display: openEscanio ? "block" : "none"}}>
+                            <label> Cantidad de escaños:</label> 
+                            <input className="form_mod_input" 
+                            type="number"
+                            onChange={handleChange}  
+                            name="escanio"
+                            autoComplete="off"/>
                         </div>
                         <div className="form_imputs">
                             <label> Seleccionar padron:</label>
@@ -123,7 +137,7 @@ export default function CreateVote() {
                         
                     {partidos?.map((partido, idx) => (
 
-                       <PartidoList idx={idx} partido={partido} partidoChange={partidoChange}/>
+                       <PartidoList key={idx} partido={partido} partidoChange={partidoChange}/>
 
                     ))}
 
