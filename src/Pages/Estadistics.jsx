@@ -1,8 +1,8 @@
 import Barchart from "../Components/Grafics/BarChart"
-import UserList from "../Components/UserList"
 import { useParams } from "react-router-dom"
 import { useEffect, useState } from "react"
 import { listaVotos, resultadoPorVotacion } from "../services/resultados"
+import UserListVote from "../Components/UserList/userListVote"
 
 export default function Estadistics() {
 
@@ -39,7 +39,7 @@ export default function Estadistics() {
                                 <th>listta de votantes</th>
                             </thead>
                             {votos?.map((voto, idx) => (
-                                <UserList key={idx} voto={voto}/>
+                                <UserListVote key={idx} voto={voto}/>
                             ))}
                         </table>
                     </div>

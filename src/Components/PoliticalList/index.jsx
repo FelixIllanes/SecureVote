@@ -15,7 +15,7 @@ function PoliticalList({partido, openModal, focusParty}) {
                 <td>{Slogan}</td>
                 <td>{Sigla}</td>
                 <td>
-                    <button onClick={handleDelete}>Elimnar</button>
+                    <button className="button_one" onClick={handleDelete}>Elimnar</button>
                 </td>
             </tr>
         </tbody>

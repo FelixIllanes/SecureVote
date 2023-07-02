@@ -9,7 +9,8 @@ export default function CreateReferendum(){
     const[openModal, setOpenModal] = useState(false)
     const[padrones, setPadrones] = useState([])
     const[body, setBody] = useState({})
-    const[openAlert, setOpenAlert] = (false)
+
+    const[openAlert, setOpenAlert] = useState(false)
 
     const[padronSelect, setPadronSelect] = useState({})
 
@@ -29,7 +30,7 @@ export default function CreateReferendum(){
             padron_electoral: padronSelect,
         })
         crearReferendum(bodyEnviar)
-        //poner alert
+        setOpenAlert(true)
         
     }
     return(
@@ -39,9 +40,9 @@ export default function CreateReferendum(){
         <main>
             <div className="create_ref_container">
             <form>
-                <h1>Crear un referendum</h1>
+                <h1>Crear un referéndum</h1>
                     <div className="form_imputs">
-                        <label> Nombre de votacion:</label>
+                        <label> Nombre de referéndum:</label>
                         <input className="form_mod_input"
                         type="text"
                         onChange={handleChange}
@@ -77,7 +78,7 @@ export default function CreateReferendum(){
                         <button type='button' onClick={() => setOpenModal(true)}>Seleccionar padron</button>
                     </div>
                     <div className="login_btn">
-                        <button type="button"  onClick={handleSubmit} className="button_one">Crear Referendum</button>
+                        <button type="button"  onClick={handleSubmit} className="button_one">Crear Referéndum</button>
                     </div>
                 </form>
             </div>

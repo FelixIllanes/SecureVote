@@ -6,6 +6,7 @@ export default function UserCrudPage() {
 
     return(
         <main>
+            <h1 className="titilo_usuarios">Lista de usuarios</h1>
             <div className="table_container">
                 <table>
                     <thead>
