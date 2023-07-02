@@ -1,5 +1,5 @@
 import { Bar } from 'react-chartjs-2'
-function RefBarchart() {
+function RefBarchartOnGoin() {
     return(
         <Bar
             data= {{
@@ -27,4 +27,4 @@ function RefBarchart() {
         />
     )
 }
-export default RefBarchart
+export default RefBarchartOnGoin

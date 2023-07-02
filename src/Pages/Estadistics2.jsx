@@ -1,10 +1,10 @@
-import Barchart from "../Components/Grafics/BarChart"
 import UserList from "../Components/UserList"
 import { useParams } from "react-router-dom"
 import { useEffect, useState } from "react"
-import { listaVotos, resultadoPorVotacion } from "../services/resultados"
+import { listaVotos, resultadoActual } from "../services/resultados"
+import BarchartOnGoin from "../Components/Grafics/BarChartOnGoin"
 
-export default function Estadistics() {
+export default function Estadistics2() {
 
     const {id} = useParams()
 
@@ -14,7 +14,7 @@ export default function Estadistics() {
 
     useEffect(() => {
         const espera = async () => {
-            resultadoPorVotacion(id).then(setData)
+            resultadoActual(id).then(setData)
             listaVotos(id).then(setVotos)
             await new Promise(resolve => setTimeout(resolve,1000));
             setLoaded(false)
@@ -30,7 +30,7 @@ export default function Estadistics() {
             <div className="estadistica_container">
                 <h1>Resultados</h1>
                 <div className="data_results">
-                    <p>Resultado de la votación: {data["status"]}</p>
+                    <p>Resultado de la votación: En curso</p>
                 </div>
                 <div className="estadistics_page">
                     <div className="list_user">
@@ -44,7 +44,7 @@ export default function Estadistics() {
                         </table>
                     </div>
                     <div className="estadistic_container">
-                        <Barchart data={data}/>
+                        <BarchartOnGoin data={data}/>
                     </div>
                 </div>
             </div>

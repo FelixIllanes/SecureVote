@@ -1,0 +1,67 @@
+.loaderV {
+    margin: auto;
+    margin-top: 15%;
+    margin-left: 45%;
+} 
+@keyframes ballot {
+    0% {opacity: 0; transform: translateY(-15px)}
+    20% {opacity: 1; transform: translateY(0)}
+    100% {opacity: 1; transform: translateY(45px)}
+}
+.loaderV ul {
+    margin: 0 0 10px 0;
+    padding: 4px;
+    list-style: none;
+    width: 80px;
+    text-align: center;
+    animation: ballot 1.5s infinite ease-in;
+    animation-fill-mode: forwards;
+}
+.loaderV li {
+    display: inline-block;
+    background: #F0F0F0;
+    height: 50px;
+    width: 40px;
+    border-radius: 6%;
+}
+.loaderV li:after {
+    content: "";
+    position: absolute;
+    top: 26px;
+    left: 37px;
+    background: #94A3AB;
+    width: 20px;
+    height: 4px;
+    transform: rotate(130deg);
+    border-radius: 8%;
+}
+.loaderV li:before {
+    content: "";
+    position: absolute;
+    top: 31px;
+    left: 30px;
+    background: #94A3AB;
+    width: 13px;
+    height: 4px;
+    transform: rotate(45deg);
+    border-radius: 8%;
+}
+.ballotbox {
+    background: #A0AFB7;
+    width: 90px;
+    height: 10px;
+    right: 3px;
+    border-radius: 8%;
+    position: relative;
+}
+
+.loaderV span {
+    content: "";
+    position: absolute;
+    top: 9px;
+    left: 5px;
+    background: #C0CFD7;
+    width: 80px;
+    height: 20px;
+    border-radius: 8%;
+}

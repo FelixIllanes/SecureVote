@@ -1,8 +1,6 @@
 import { Bar } from 'react-chartjs-2'
 import {Chart as ChartJS} from 'chart.js/auto'
-import { getPartidoName } from '../../services/partido'
-import { useEffect, useState } from 'react'
-function Barchart({data}) {
+function BarchartOnGoin({data}) {
 
 
     return(
@@ -12,12 +10,12 @@ function Barchart({data}) {
                 datasets: [
                     { 
                     label: 'Votaciones',
-                    data: [data["resultado"][0]["cant_votos"],
-                    data["resultado"][1]["cant_votos"],
-                    data["resultado"][2]["cant_votos"],
-                    data["resultado"][3]["cant_votos"],
-                    data["resultado"][0]["cant_vnullo"],
-                    data["resultado"][0]["cant_vblanco"]],
+                    data: [data["votos1"],
+                    data["votos2"],
+                    data["votos3"],
+                    data["votos4"],
+                    data["votosN"],
+                    data["votosB"]],
                     backgroundColor:[
                         '#FF0000',
                         '#20B2AA',
@@ -39,4 +37,4 @@ function Barchart({data}) {
         />
     )
 }
-export default Barchart
+export default BarchartOnGoin

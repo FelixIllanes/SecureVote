@@ -9,3 +9,8 @@ export const listaVotos = (id) =>
     fetch(`${api}/getListVotosHash/${id}`)
     .then((res) => res.json())
     .then((data) => data.votos)
+
+export const resultadoActual = (id) =>
+    fetch(`${api}/getResultadoActual/${id}`)
+    .then((res) => res.json())
+    .then((data) => data)

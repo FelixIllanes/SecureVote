@@ -82,3 +82,6 @@
 .delete_butons button{
     margin-right: 10px;
 }
+.modal_body{
+    text-align: center;
+}

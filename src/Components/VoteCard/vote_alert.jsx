@@ -1,17 +1,16 @@
-function AlertCensus({closeAlert}){
+function VoteAlert({redirectTo}){
 
     return(
         <div className="modal_background_census">
             <div className="modal_container_delete">
                 <div className="close_boton">
-                    <button onClick={() => closeAlert(false)}>X</button>
                 </div>
-                <div className="modal_body">
-                    <h2>Se creo el padron con exito</h2>
+                <div className="modal_body_">
+                    <h2>Se registro su voto de forma exitosa</h2>
                 </div>
                 <div className="delete_butons">
                     <button className='button_one' 
-                    onClick={() => window.location.reload()} 
+                    onClick={() => redirectTo()} 
                     type="button">Aceptar</button>
                 </div>
             </div>
@@ -19,4 +18,4 @@ function AlertCensus({closeAlert}){
     )
 }
 
-export default AlertCensus
+export default VoteAlert

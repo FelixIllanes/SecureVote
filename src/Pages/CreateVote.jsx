@@ -5,11 +5,13 @@ import { getAllPadrones } from "../services/padron"
 import { getAllpartidos } from "../services/partido"
 import PartidoList from "../Components/CreateVoteForm/partidoList"
 import { crearVotacion } from "../services/vote"
+import CreateVoteAlert from "../Components/CreateVoteForm/createVoteAlert"
 export default function CreateVote() {
     
     const[body, setBody] = useState({})
 
     const[openModal, setOpenModal] = useState(false)
+    const[openAlert, setOpenAlert] = useState(false)
 
     const[padrones, setPadrones] = useState([])
 
@@ -73,6 +75,7 @@ export default function CreateVote() {
                 ...partidosData
             })
             crearVotacion(bodyEnviar)
+            setOpenAlert(true)
         }else{
             console.log("Debe seleccionar 4 partidos")
         }
@@ -82,6 +85,7 @@ export default function CreateVote() {
     return(
         <>
         {openModal && <VoteModal setOpenModal={setOpenModal} padrones={padrones} setPadronSelect={setPadronSelect}/>}
+        {openAlert && <CreateVoteAlert closeAlert={setOpenAlert}/>}
         <main>
         <div className='create_vote_container'>
             <form className="create_user_form">

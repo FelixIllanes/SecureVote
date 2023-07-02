@@ -158,6 +158,7 @@ table tr:hover{
  }
  .votes_tables_container{
   display: grid;
+  width: 90%;
   grid-template-columns: auto auto;
   padding: 0;
   margin: auto;
@@ -174,4 +175,22 @@ table tr:hover{
   font-size: 24px;
   box-shadow: 5px 5px 5px 4px rgba(0, 0, 0, 0.4);
   background-color: rgba(255, 255, 255, 0.372);
- }
+}
+
+.create_ref_container{
+  width: 40vw;
+  margin: 0 auto;
+  border: 1px solid black;
+  padding: 50px 50px 20px 50px;
+  border-radius: 15px;
+  box-shadow: 4px 4px 4px 3px rgba(0, 0, 0, 0.4);
+  background-color: rgba(255, 255, 255, 0.372);
+}
+.create_ref_container h1{
+  text-align: center;
+  margin-bottom: 30px;
+}
+.create_ref_container label{
+  font-size: 19px;
+  margin: 0;
+}

@@ -2,17 +2,22 @@ import { useEffect, useState } from "react"
 import EndVote from "../Components/VotacionPendiente/end_vote"
 import { votacionesActivas } from "../services/vote"
 import AlertEndModal from "../Components/VotacionPendiente/alert_endvote"
+import VoteLoader from "../Components/VoteLoader"
 export default function AdminHome() {
 
     const[votaciones, setVotaciones] = useState([])
     
     const[openModal, setOpenModal] = useState(false)
     const[id, setId] = useState()
+    const[loaded, setLoaded] = useState(false)
 
     useEffect(() => {
         votacionesActivas().then(setVotaciones)
     },[])
 
+    if(loaded){
+        return <main><VoteLoader/></main>
+    }
     return(
         <>
         {openModal && <AlertEndModal closeModal={setOpenModal} id={id}/>}
@@ -29,7 +34,7 @@ export default function AdminHome() {
 
             {votaciones?.map((votacion, idx) => (
 
-                <EndVote key={idx} votacion={votacion} openModal={setOpenModal} setId={setId}/>
+                <EndVote key={idx} votacion={votacion} openModal={setOpenModal} setId={setId} setLoaded={setLoaded}/>
 
             ))}
 

@@ -2,7 +2,6 @@ import { useEffect, useState } from "react"
 import { partidoById } from "../../services/partido"
 import "./voteCard.css"
 import { getCadidatoxPartido } from "../../services/user"
-import { resolvePath } from "react-router-dom"
 function VoteCard({partido, votoChange}) {
 
     const[unPartido, setUnPartido] = useState()
@@ -35,8 +34,8 @@ function VoteCard({partido, votoChange}) {
                 <p>{unPartido.Slogan}</p>
             </div>
             <div className="card_checkbox">
-                <label class="container_checkbox">
-                    <input type="checkbox" onChange={votoChange} value={candidato.id} name={unPartido.Sigla} id={unPartido.id}/>
+                <label className="container_checkbox">
+                    <input type="checkbox" onChange={votoChange} value={candidato.candidato.ci} name={unPartido.Sigla} id={unPartido.id}/>
                     <p>Votar</p>
                 </label>
            </div>

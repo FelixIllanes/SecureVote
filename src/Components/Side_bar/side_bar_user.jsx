@@ -3,6 +3,7 @@ import { FaBars, FaUserTie, FaRegChartBar, FaUsers, FaTh, FaThList, FaVoteYea,Fa
 import { NavLink } from "react-router-dom";
 import { useAuth } from "../../hooks/useAuth";
 import "./sidebar.css"
+import ConnectionButton from "../ConectionButton";
 
 const SideBarUser = ({children}) =>{
     const[isOpen, setIsOpen] = useState(false)
@@ -49,6 +50,9 @@ const SideBarUser = ({children}) =>{
                         </NavLink>
                     ))
                 }
+                <div className="contract_button" activeclassname="active">
+                    <ConnectionButton/>
+                </div>
                 <div className="link logout userlogout" activeclassname="active">
                     <button className="icon log" onClick={handleClick}><FaSignOutAlt/></button>
                     <div style={{display: isOpen ? "block" : "none"}} className="texto_link">Logout</div>

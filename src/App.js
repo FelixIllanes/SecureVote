@@ -15,6 +15,10 @@ import CreateCensus from './Pages/CreateCensus';
 import PoliticalParty from './Pages/PoliticalParty';
 import { AuthProvider } from './store/user';
 import Referendum from './Pages/Referendum';
+import CreateReferendum from './Pages/CreateReferendum';
+import Estadistics2 from './Pages/Estadistics2';
+import RefEstadistics from './Pages/RefEstadistics';
+import RefEstadistics2 from './Pages/RefEstadistics2';
 
 function App() {
   return (
@@ -41,6 +45,10 @@ function App() {
             <Route path='PoliticalParty' element={<PoliticalParty/>}/>
             <Route path='Resultados' element={<Allvotes />}/>
             <Route path='Estadisticas/:id' element={<Estadistics/>}/>
+            <Route path='Estadisticas2/:id' element={<Estadistics2/>}/>
+            <Route path='CreateReferendum' element={<CreateReferendum/>}/>
+            <Route path='RefEstadistics' element={<RefEstadistics/>}/>
+            <Route path='RefEstadistics2' element={<RefEstadistics2/>}/>
           </Route>
 
           <Route path="*" element={<h1>Not Found</h1>}/>

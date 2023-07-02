@@ -12,5 +12,11 @@
 .votacion_info_home{
     align-items: center;
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: auto auto auto auto;
+}
+.votacion_info_home button{
+    width: 12rem;
+}
+.modal_body_endVote{
+    text-align: center;
 }

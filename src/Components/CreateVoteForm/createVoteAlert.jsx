@@ -1,4 +1,4 @@
-function AlertCensus({closeAlert}){
+function CreateVoteAlert({closeAlert}){
 
     return(
         <div className="modal_background_census">
@@ -7,7 +7,7 @@ function AlertCensus({closeAlert}){
                     <button onClick={() => closeAlert(false)}>X</button>
                 </div>
                 <div className="modal_body">
-                    <h2>Se creo el padron con exito</h2>
+                    <h2>Se creo la votacion con exito</h2>
                 </div>
                 <div className="delete_butons">
                     <button className='button_one' 
@@ -19,4 +19,4 @@ function AlertCensus({closeAlert}){
     )
 }
 
-export default AlertCensus
+export default CreateVoteAlert

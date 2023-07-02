@@ -2,7 +2,7 @@ import { terminarVotacion } from "../../services/vote"
 function AlertEndModal({closeModal, id}){
 
     const handleSubmit = (evt) =>{
-        terminarVotacion(id) 
+        terminarVotacion(id)
         window.location.reload()
     }
 
@@ -12,7 +12,7 @@ function AlertEndModal({closeModal, id}){
                 <div className="close_boton">
                     <button onClick={() => closeModal(false)}>X</button>
                 </div>
-                <div className="modal_body_">
+                <div className="modal_body_endVote">
                     <h2>¿Desea finalizar esta votación?</h2>
                 </div>
                 <div className="delete_butons">

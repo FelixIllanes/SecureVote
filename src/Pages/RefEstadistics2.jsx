@@ -1,7 +1,7 @@
-import RefBarchartOnGoin from "../Components/Grafics/refBarChartOnGoin";
+import RefBarchart from "../Components/Grafics/refBarChart";
 import UserList from "../Components/UserList";
 
-export default function RefEstadistics() {
+export default function RefEstadistics2() {
     return(
         <main>
             <div className="estadistica_container">
@@ -16,7 +16,7 @@ export default function RefEstadistics() {
                         </table>
                     </div>
                     <div className="estadistic_container">
-                        <RefBarchartOnGoin/>
+                        <RefBarchart/>
                     </div>
                 </div>
             </div>

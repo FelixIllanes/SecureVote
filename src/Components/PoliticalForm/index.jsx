@@ -51,7 +51,7 @@ function PoliticalForm() {
                     autocomplete="off"/>
                 </div>
                 <div className="login_btn_politicalform">
-                    <button type="submit" onClick={handleSubmit} className="button_one">Crear Usuario</button>
+                    <button type="submit" onClick={handleSubmit} className="button_one">Crear Partido</button>
                 </div>
             </form>
         </div>
