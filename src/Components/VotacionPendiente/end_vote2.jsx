@@ -1,19 +1,19 @@
 import { referendumAutomatico } from "../../services/referendum"
 
-function EndVote2({referendum,openModal, setId, setLoaded}) {
+function EndVote2({referendum,openModalRef, setId2, setLoaded}) {
     
     const{id, nombre, tipo_votacion} = referendum
 
     const handleSubmit = (evt) =>{
-        setId(id)
-        openModal(true)
+        setId2(id)
+        openModalRef(true)
     }
 
     const simulate = (evt) => {
         setLoaded(true)
         const espera = async () =>{
             referendumAutomatico(id)
-            await new Promise(resolve => setTimeout(resolve,4000))
+            await new Promise(resolve => setTimeout(resolve,5000))
             setLoaded(false)
             window.location.reload()
         }

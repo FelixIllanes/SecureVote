@@ -13,6 +13,7 @@ export default function AdminHome() {
     const[openModal, setOpenModal] = useState(false)
     const[openModalRef, setOpenModalRef] = useState(false)
     const[id, setId] = useState()
+    const[id2, setId2] = useState()
     const[loaded, setLoaded] = useState(false)
 
     useEffect(() => {
@@ -26,7 +27,7 @@ export default function AdminHome() {
     return(
         <>
         {openModal && <AlertEndModal closeModal={setOpenModal} id={id}/>}
-        {openModal && <AlertEndModalRef closeModal={setOpenModalRef} id={id}/>}
+        {openModalRef && <AlertEndModalRef closeModalRef={setOpenModalRef} id2={id2}/>}
         <main>
            <div>
             <div className="info_cont">
@@ -48,7 +49,7 @@ export default function AdminHome() {
             <div className="votacion_pendiente_lista">
                 <h1>Referéndums en curso</h1>
                 {referendums?.map((referendum, idx) => (
-                    <EndVote2 key={idx} referendum={referendum} openModal={setOpenModal} setId={setId} setLoaded={setLoaded}/>
+                    <EndVote2 key={idx} referendum={referendum} openModalRef={setOpenModalRef} setId2={setId2} setLoaded={setLoaded}/>
                 ))}
             </div>
            </div>

@@ -60,7 +60,7 @@ export default function CreateCensus() {
                                 setAssign({})
                                 setOpenModal(false)
                                 setOpenAlert(true)
-                                /* window.location.reload() */
+                                window.location.reload()
                             })
                         }
                     }

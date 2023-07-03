@@ -1,10 +1,10 @@
 import './censusform.css'
 import UsuarioCheck from './UsuariosCheck'
 function Modal_Census({closeModal, users, userCheck, handleSubmit}){
- 
+
     return(
         <div className="modal_background_census">
-            <form /* onSubmit={handleOnSubmit} */>
+            <form>
                 <div className="modal_container_census">
                     <div className="close_boton">
                         <button onClick={() => closeModal(false)}>X</button>

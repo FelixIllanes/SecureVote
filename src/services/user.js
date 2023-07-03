@@ -24,3 +24,8 @@ export const crearUsuario = (body) =>
     fetch(`${api}/register/` , {method: 'POST', headers, body: JSON.stringify(body)})
     .then((res) => res.json())
     .then((data) => data)
+
+export const getUserSinPartido = () =>
+    fetch(`${api}/getUsersSinPartido/`)
+    .then((res) => res.json())
+    .then((data) => data.usuarios)

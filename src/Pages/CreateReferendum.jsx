@@ -75,10 +75,10 @@ export default function CreateReferendum(){
                     </div>
                     <div className="form_imputs">
                         <label> Seleccionar padron:</label>
-                        <button type='button' onClick={() => setOpenModal(true)}>Seleccionar padron</button>
+                        <button type='button' className="button_two" onClick={() => setOpenModal(true)}>Seleccionar padron</button>
                     </div>
                     <div className="login_btn">
-                        <button type="button"  onClick={handleSubmit} className="button_one">Crear Referéndum</button>
+                        <button type="button" style={{marginTop:12+"px"}} onClick={handleSubmit} className="button_one">Crear Referéndum</button>
                     </div>
                 </form>
             </div>

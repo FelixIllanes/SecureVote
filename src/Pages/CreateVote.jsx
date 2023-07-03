@@ -74,7 +74,7 @@ export default function CreateVote() {
                 padron_electoral: padronSelect,
                 ...partidosData
             })
-            /* crearVotacion(bodyEnviar) */
+            crearVotacion(bodyEnviar)
             setOpenAlert(true)
         }else{
             console.log("Debe seleccionar 4 partidos")
@@ -134,7 +134,7 @@ export default function CreateVote() {
                         </div>
                         <div className="form_imputs">
                             <label> Seleccionar padron:</label>
-                            <button type='button' onClick={() => setOpenModal(true)}>Seleccionar padron</button>
+                            <button type='button' className="button_two" onClick={() => setOpenModal(true)}>Seleccionar padron</button>
                         </div>
                     </div>
                     <div className='part_two'>

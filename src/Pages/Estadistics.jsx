@@ -36,7 +36,7 @@ export default function Estadistics() {
                     <div className="list_user">
                         <table>
                             <thead>
-                                <th>listta de votantes</th>
+                                <th>Lista de votantes</th>
                             </thead>
                             {votos?.map((voto, idx) => (
                                 <UserListVote key={idx} voto={voto}/>

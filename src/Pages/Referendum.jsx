@@ -3,6 +3,7 @@ import Referendum_pregunta from "../Components/VoteCard/pregunta_ref";
 import { useEffect, useState } from "react";
 import { getReferendumxId, votarReferendum } from "../services/referendum";
 import { getIndexVoteRef, hashReturnRef, indexVoteRef, votar_referendum } from "../services/ContratoRef";
+import AlertReferendum from "../Components/VoteCard/alertReferendum";
 
 export default function Referendum() {
 
@@ -10,6 +11,7 @@ export default function Referendum() {
     const[referendum, setReferendum] = useState([])
     const[lleno, setLleno] = useState(false)
     const[seleccion, setSeleccion] = useState({})
+    const[openModal, setOpenModal] = useState(false)
 
     const votoChange = (evt) => {
         if(document.getElementById(evt.target.id).checked){
@@ -48,15 +50,13 @@ export default function Referendum() {
 
         let hashValue = hashReturnRef()
         let indexValue = indexVoteRef()
-        console.log(hashValue)
-        console.log(indexValue)
 
         votarReferendum(Number(localStorage.getItem('userId')),
                          Number(id),
                          hashValue,
                          Number(indexValue),
                          tipo_voto)
-
+        setOpenModal(true)
     }
 
     useEffect(() => {
@@ -65,6 +65,8 @@ export default function Referendum() {
 
 
     return(
+        <>
+        {openModal && <AlertReferendum closeAlert={setOpenModal}/>}
         <main>
             <div className="container_vote_complete_ref">
                 <form action="">
@@ -76,5 +78,6 @@ export default function Referendum() {
                 </form>
             </div>
         </main>
+        </>
     )
 }

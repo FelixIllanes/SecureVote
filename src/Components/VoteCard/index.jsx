@@ -29,6 +29,7 @@ function VoteCard({partido, votoChange}) {
             <div className="card_header">
                 <div className="inf_card">
                     <h1>{candidato.candidato.nombre} {candidato.candidato.apellido}</h1>
+                    <h2>{unPartido.nombre_partido}</h2>
                 </div>
                 <img src="../../../logo192.png" alt="" />
                 <p>{unPartido.Slogan}</p>

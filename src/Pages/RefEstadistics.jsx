@@ -37,7 +37,7 @@ export default function RefEstadistics() {
                     <div className="list_user">
                         <table>
                             <thead>
-                                <th>listta de votantes</th>
+                                <th>Lista de votantes</th>
                             </thead>
 
                             {votos?.map((voto, idx) => (

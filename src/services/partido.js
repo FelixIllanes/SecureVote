@@ -22,3 +22,8 @@ export const getPartidoName = (ci) =>
     fetch(`${api}/getPartidoxUsr/${ci}`)
     .then((res) => res.json())
     .then((data) => data.partido)
+
+export const asignarPartido = (body,ci) =>
+    fetch(`${api}/api/usuario/${ci}/` , {method: 'PATCH', headers, body: JSON.stringify(body)})
+    .then((res) => res.json())
+    .then((data) => data)
